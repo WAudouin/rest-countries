@@ -20,23 +20,23 @@ function App() {
 		})
 	}, [])
 
-	useEffect(() => {
-		const copy = [...searchedCountries];
-		copy.sort((a,b) => {
-			let copyA = a.translations.fra.common.toLowerCase(),
-					copyB = b.translations.fra.common.toLowerCase();
+	// useEffect(() => {
+	// 	const copy = [...searchedCountries];
+	// 	copy.sort((a,b) => {
+	// 		let copyA = a.translations.fra.common.toLowerCase(),
+	// 				copyB = b.translations.fra.common.toLowerCase();
 
-			if (copyA < copyB) {
-					return -1;
-			}
-			if (copyA > copyB) {
-					return 1;
-			}
-			return 0;
+	// 		if (copyA < copyB) {
+	// 				return -1;
+	// 		}
+	// 		if (copyA > copyB) {
+	// 				return 1;
+	// 		}
+	// 		return 0;
 
-		})
-		setSearchedCountries(copy)
-	}, [searchedCountries])
+	// 	})
+	// 	setSearchedCountries(copy)
+	// }, [searchedCountries])
 
 	const filterCountries = (ev) => {
 		if(ev.target.value !== ''){
